@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Markers on Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 80vh;
+        }
+        #controls {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .coordinates {
+            width: 200px;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <h3>Enter Coordinates</h3>
+        <div>
+            <label>Mortar Location: </label>
+            <input type="text" id="mortarLat" placeholder="Latitude" class="coordinates">
+            <input type="text" id="mortarLng" placeholder="Longitude" class="coordinates">
+        </div>
+        <div>
+            <label>Observer Location: </label>
+            <input type="text" id="observerLat" placeholder="Latitude" class="coordinates">
+            <input type="text" id="observerLng" placeholder="Longitude" class="coordinates">
+        </div>
+        <div>
+            <label>Target Location: </label>
+            <input type="text" id="targetLat" placeholder="Latitude" class="coordinates">
+            <input type="text" id="targetLng" placeholder="Longitude" class="coordinates">
+        </div>
+        <button onclick="addLocations()">Add Locations</button>
+    </div>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
